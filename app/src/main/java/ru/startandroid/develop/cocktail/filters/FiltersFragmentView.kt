@@ -1,4 +1,6 @@
 package ru.startandroid.develop.cocktail.filters
 
-interface FiltersFragmentView {
+import ru.startandroid.develop.cocktail.mvp.BasicView
+
+interface FiltersFragmentView : BasicView {
 }

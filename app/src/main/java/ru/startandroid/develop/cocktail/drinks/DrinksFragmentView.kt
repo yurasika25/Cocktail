@@ -1,4 +1,9 @@
 package ru.startandroid.develop.cocktail.drinks
 
-interface DrinksFragmentView {
+import ru.startandroid.develop.cocktail.mvp.BasicView
+
+interface DrinksFragmentView : BasicView{
+    fun navigateToFilters()
+
+
 }
