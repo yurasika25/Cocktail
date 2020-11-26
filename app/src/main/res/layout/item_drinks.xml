@@ -2,14 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="143dp"
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/drinkPhotoIV"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_margin="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,13 +19,13 @@
 
     <TextView
         android:id="@+id/drinkTitleTV"
-        android:layout_width="wrap_content"
+        android:layout_width="244dp"
         android:layout_height="wrap_content"
-        tools:text="@string/drinks"
+        android:layout_marginTop="74dp"
+        android:textAlignment="textStart"
         android:textSize="16sp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/drinkPhotoIV"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/drinks" />
 </androidx.constraintlayout.widget.ConstraintLayout>
