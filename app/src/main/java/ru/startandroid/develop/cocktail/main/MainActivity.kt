@@ -30,7 +30,8 @@ class  MainActivity : AppCompatActivity(), MainView {
         val fragment: Fragment = DrinksFragment.newInstance()
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
-        ft.replace(R.id.mainContainer, fragment)
+        ft.add(R.id.mainContainer, fragment)
+            .addToBackStack(null)
         ft.commit()
     }
 

@@ -4,5 +4,4 @@ import ru.startandroid.develop.cocktail.mvp.BasicView
 
 interface MainView : BasicView {
     fun onNavigateToDrinksFragment()
-
 }
