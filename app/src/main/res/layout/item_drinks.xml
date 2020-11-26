@@ -28,4 +28,5 @@
         app:layout_constraintStart_toEndOf="@+id/drinkPhotoIV"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/drinks" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
