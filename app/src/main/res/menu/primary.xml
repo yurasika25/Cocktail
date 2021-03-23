@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/labelMenuHome"
+        android:id="@+id/primaryHome"
+        android:icon="@drawable/ic_home_btn"/>
+
+    <item android:title="@string/delivery"
+        android:id="@+id/primaryDelivery"
+        android:icon="@drawable/ic_drinks_delivery"/>
+
+    <item android:title="@string/shop"
+        android:id="@+id/primaryShopping"
+        android:icon="@drawable/ic_task_btn"/>
+
+    <item android:title="@string/labelMenyHistory"
+        android:id="@+id/primaryMenu"
+        android:icon="@drawable/ic_menu_btn"/>
+
+
+
+</menu>

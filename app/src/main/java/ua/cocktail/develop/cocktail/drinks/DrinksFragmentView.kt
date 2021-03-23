@@ -6,4 +6,6 @@ interface DrinksFragmentView : BasicView {
     fun navigateToFilters(filters: HashMap<String, Boolean>)
     fun setUpUI()
     fun setData(data: List<Any>)
+//    fun navigateToFiltersTwo()
+
 }

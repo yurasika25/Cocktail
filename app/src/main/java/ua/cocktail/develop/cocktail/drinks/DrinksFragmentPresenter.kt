@@ -1,8 +1,13 @@
 package ua.cocktail.develop.cocktail.drinks
 
+import android.annotation.SuppressLint
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.mvp.BasicPresenter
 import ua.cocktail.develop.cocktail.network.model.FiltersModel
 import ua.cocktail.develop.cocktail.network.model.HeaderModel
@@ -25,6 +30,23 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
         fetchFiltersData()
     }
 
+//    fun onNavigateClicked(item: MenuItem) {
+//        when (item.itemId) {
+//            R.id.primaryDelivery -> {
+//                getView()?.navigateToFiltersTwo()
+//            }
+//            else -> {
+//                getView()?.navigateToFiltersTwo()
+//            }
+//
+//        }
+//
+//    }
+//
+//    fun onFilterClickedTwo(){
+//        getView()?.navigateToFiltersTwo()
+//    }
+
     fun onFilterButtonClicked() {
         val filterMap = HashMap<String, Boolean>()
         filterList.forEach {
@@ -40,6 +62,7 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
         fetchDrinksData(currentPage)
     }
 
+    @SuppressLint("CheckResult")
     private fun fetchDrinksData(page: Int) {
         isLoading = true
         if (page == 0) {
@@ -64,6 +87,7 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
             })
     }
 
+    @SuppressLint("CheckResult")
     private fun fetchFiltersData() {
         repository.getFilters()
             .observeOn(AndroidSchedulers.mainThread())

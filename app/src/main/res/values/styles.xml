@@ -1,0 +1,21 @@
+<resources>
+
+
+    <style name="BottomNavigation.Text.Active" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?colorOnBackground</item>
+    </style>
+
+    <style name="BottomNavigation.Text.Inactive" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">?colorOnBackground</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
+    <style name="CocktailDefaults" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+</resources>
+
