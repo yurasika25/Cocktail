@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarEmpty"
+        android:id="@+id/toolbarScanner"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/white"
@@ -19,6 +19,7 @@
         app:titleTextColor="@color/black" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollId"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -31,17 +32,22 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="74dp"
+                android:background="@color/white"
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/bonus_btn_id"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
-                    android:src="@drawable/screenshot"
-                    android:layout_marginTop="12dp"
+                    android:clickable="true"
                     android:layout_marginStart="180dp"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/im_four"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/todo" />
+                    tools:ignore="ImageContrastCheck"
+                    android:focusable="true" />
 
 
                 <TextView
@@ -101,11 +107,67 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <LinearLayout
-            android:id="@+id/linearLayouts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="385dp"
+                        android:layout_height="260dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_fon_one" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="385dp"
+                        android:layout_height="260dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_fon_one" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="385dp"
+                        android:layout_height="260dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_fon_one" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -115,131 +177,244 @@
                 android:textColor="@color/black"
                 android:text="@string/offer" />
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="none">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    tools:ignore="UselessParent">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
-                        android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:orientation="horizontal">
 
-                        <Switch
-                            android:id="@+id/switch2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginTop="12dp"
-                            tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="280dp"
+                            android:layout_height="147dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="3dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
-                            android:layout_marginTop="15dp"
-                            android:text="@string/discount_prices"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            <Switch
+                                android:id="@+id/switch8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="12dp"
+                                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="40dp"
-                            android:contentDescription="@string/todo"
-                            android:src="@drawable/cocktail" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="19dp"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/discount_prices"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="18dp"
-                            android:layout_marginTop="95dp"
-                            android:maxLines="2"
-                            android:text="@string/date"
-                            android:textSize="8sp"
-                            tools:ignore="SmallSp" />
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="50dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/im_two" />
 
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
-                            android:layout_marginTop="105dp"
-                            android:maxLines="2"
-                            android:text="@string/drinks_shop"
-                            android:textSize="7sp"
-                            tools:ignore="MissingPrefix,SmallSp" />
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginTop="110dp"
+                                android:maxLines="2"
+                                android:text="@string/date"
+                                android:textSize="9sp"
+                                tools:ignore="SmallSp" />
 
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
-                            android:layout_marginTop="15dp"
-                            android:text="@string/oll_cocktails"
-                            android:textColor="@color/black"
-                            android:textSize="9sp"
-                            tools:ignore="SmallSp" />
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="105dp"
+                                android:maxLines="2"
+                                android:text="@string/drinks_shop"
+                                android:textSize="11sp"
+                                tools:ignore="MissingPrefix,SmallSp" />
 
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="2dp"
-                            android:layout_marginStart="80dp"
-                            android:layout_marginTop="98dp"
-                            android:background="@color/colorPrimary" />
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/oll_cocktails"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
 
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
-                        android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
-                        android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="25dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="98dp"
+                                android:background="@color/colorPrimary" />
 
 
-                </LinearLayout>
+                        </androidx.cardview.widget.CardView>
 
-            </HorizontalScrollView>
 
-        </LinearLayout>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="280dp"
+                            android:layout_height="147dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="3dp">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayouts">
+                            <Switch
+                                android:id="@+id/switch9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="12dp"
+                                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="19dp"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/discount_prices"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="50dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/im_three"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginTop="110dp"
+                                android:maxLines="2"
+                                android:text="@string/date"
+                                android:textSize="9sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="105dp"
+                                android:maxLines="2"
+                                android:text="@string/drinks_shop"
+                                android:textSize="11sp"
+                                tools:ignore="MissingPrefix,SmallSp" />
+
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/oll_cocktails"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="98dp"
+                                android:background="@color/colorPrimary" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="280dp"
+                            android:layout_height="147dp"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="3dp">
+                            <Switch
+                                android:id="@+id/switch78"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="12dp"
+                                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="19dp"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/discount_prices"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="50dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/im_five" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginTop="110dp"
+                                android:maxLines="2"
+                                android:text="@string/date"
+                                android:textSize="9sp"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="105dp"
+                                android:maxLines="2"
+                                android:text="@string/drinks_shop"
+                                android:textSize="11sp"
+                                tools:ignore="MissingPrefix,SmallSp" />
+
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/oll_cocktails"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                tools:ignore="SmallSp" />
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp"
+                                android:layout_marginStart="90dp"
+                                android:layout_marginTop="98dp"
+                                android:background="@color/colorPrimary" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -257,77 +432,69 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
+                        android:layout_width="280dp"
+                        android:layout_height="147dp"
                         android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
+                        app:cardCornerRadius="4dp"
                         app:cardElevation="3dp">
-
-                        <Switch
-                            android:id="@+id/switch1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginTop="12dp"
-                            tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="19dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="12dp"
                             android:text="@string/discount_prices"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
                             android:layout_marginStart="15dp"
-                            android:layout_marginTop="40dp"
+                            android:layout_marginTop="50dp"
                             android:contentDescription="@string/todo"
-                            android:src="@drawable/cocktail" />
+                            android:src="@drawable/limes" />
 
                         <TextView
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="18dp"
-                            android:layout_marginTop="95dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="110dp"
                             android:maxLines="2"
                             android:text="@string/date"
-                            android:textSize="8sp"
+                            android:textSize="9sp"
                             tools:ignore="SmallSp" />
 
                         <TextView
-                            android:layout_width="160dp"
+                            android:layout_width="170dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="90dp"
                             android:layout_marginTop="105dp"
                             android:maxLines="2"
                             android:text="@string/drinks_shop"
-                            android:textSize="7sp"
+                            android:textSize="11sp"
                             tools:ignore="MissingPrefix,SmallSp" />
 
                         <TextView
-                            android:layout_width="100dp"
+                            android:layout_width="130dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="90dp"
                             android:layout_marginTop="15dp"
                             android:text="@string/oll_cocktails"
                             android:textColor="@color/black"
-                            android:textSize="9sp"
+                            android:textSize="11sp"
                             tools:ignore="SmallSp" />
 
                         <View
                             android:layout_width="20dp"
                             android:layout_height="2dp"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="90dp"
                             android:layout_marginTop="98dp"
                             android:background="@color/colorPrimary" />
 
@@ -336,44 +503,138 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
+                        android:layout_width="280dp"
+                        android:layout_height="147dp"
                         android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
 
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/discount_prices"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="50dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_six" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="110dp"
+                            android:maxLines="2"
+                            android:text="@string/date"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="105dp"
+                            android:maxLines="2"
+                            android:text="@string/drinks_shop"
+                            android:textSize="11sp"
+                            tools:ignore="MissingPrefix,SmallSp" />
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/oll_cocktails"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="98dp"
+                            android:background="@color/colorPrimary" />
+
+
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
+                        android:layout_width="280dp"
+                        android:layout_height="147dp"
                         android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="25dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/discount_prices"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="50dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_five" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="110dp"
+                            android:maxLines="2"
+                            android:text="@string/date"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp,TooManyViews" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="105dp"
+                            android:maxLines="2"
+                            android:text="@string/drinks_shop"
+                            android:textSize="11sp"
+                            tools:ignore="MissingPrefix,SmallSp" />
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/oll_cocktails"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="98dp"
+                            android:background="@color/colorPrimary" />
+
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
             </HorizontalScrollView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -391,251 +652,213 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
+                        android:layout_width="280dp"
+                        android:layout_height="147dp"
                         android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
+                        app:cardCornerRadius="4dp"
                         app:cardElevation="3dp">
 
-                        <Switch
-                            android:id="@+id/switch3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_marginTop="12dp"
-                            tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="19dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="12dp"
                             android:text="@string/discount_prices"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
                             android:layout_marginStart="15dp"
-                            android:layout_marginTop="40dp"
+                            android:layout_marginTop="50dp"
                             android:contentDescription="@string/todo"
-                            android:src="@drawable/cocktail" />
+                            android:src="@drawable/im_three"
+                            tools:ignore="ImageContrastCheck" />
 
                         <TextView
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="18dp"
-                            android:layout_marginTop="95dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="110dp"
                             android:maxLines="2"
                             android:text="@string/date"
-                            android:textSize="8sp"
+                            android:textSize="9sp"
                             tools:ignore="SmallSp" />
 
                         <TextView
-                            android:layout_width="160dp"
+                            android:layout_width="170dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="90dp"
                             android:layout_marginTop="105dp"
                             android:maxLines="2"
                             android:text="@string/drinks_shop"
-                            android:textSize="7sp"
+                            android:textSize="11sp"
                             tools:ignore="MissingPrefix,SmallSp" />
 
                         <TextView
-                            android:layout_width="100dp"
+                            android:layout_width="130dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="90dp"
                             android:layout_marginTop="15dp"
                             android:text="@string/oll_cocktails"
                             android:textColor="@color/black"
-                            android:textSize="9sp"
+                            android:textSize="11sp"
                             tools:ignore="SmallSp" />
 
                         <View
                             android:layout_width="20dp"
                             android:layout_height="2dp"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="90dp"
                             android:layout_marginTop="98dp"
                             android:background="@color/colorPrimary" />
 
 
                     </androidx.cardview.widget.CardView>
-
-
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
+                        android:layout_width="280dp"
+                        android:layout_height="147dp"
                         android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
 
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/discount_prices"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="50dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_five" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="110dp"
+                            android:maxLines="2"
+                            android:text="@string/date"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="105dp"
+                            android:maxLines="2"
+                            android:text="@string/drinks_shop"
+                            android:textSize="11sp"
+                            tools:ignore="MissingPrefix,SmallSp" />
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/oll_cocktails"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="98dp"
+                            android:background="@color/colorPrimary" />
+
+
+                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
+                        android:layout_width="280dp"
+                        android:layout_height="147dp"
                         android:layout_margin="5dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="3dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="130dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="25dp"
-                        app:cardCornerRadius="6dp"
-                        app:cardElevation="3dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/discount_prices"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="50dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/im_two" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="110dp"
+                            android:maxLines="2"
+                            android:text="@string/date"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="105dp"
+                            android:maxLines="2"
+                            android:text="@string/drinks_shop"
+                            android:textSize="11sp"
+                            tools:ignore="MissingPrefix,SmallSp" />
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/oll_cocktails"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="90dp"
+                            android:layout_marginTop="98dp"
+                            android:background="@color/colorPrimary" />
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
             </HorizontalScrollView>
 
-        </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:layout_marginStart="15dp"
-                    android:textColor="@color/black"
-                    android:text="@string/shares_owm_import" />
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:orientation="horizontal">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="240dp"
-                            android:layout_height="130dp"
-                            android:layout_margin="5dp"
-                            app:cardCornerRadius="6dp"
-                            app:cardElevation="3dp">
-
-                            <Switch
-                                android:id="@+id/switch4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginTop="12dp"
-                                tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="19dp"
-                                android:layout_marginTop="15dp"
-                                android:text="@string/discount_prices"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginTop="40dp"
-                                android:contentDescription="@string/todo"
-                                android:src="@drawable/cocktail" />
-
-                            <TextView
-                                android:layout_width="50dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="18dp"
-                                android:layout_marginTop="95dp"
-                                android:maxLines="2"
-                                android:text="@string/date"
-                                android:textSize="8sp"
-                                tools:ignore="SmallSp" />
-
-                            <TextView
-                                android:layout_width="160dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="80dp"
-                                android:layout_marginTop="105dp"
-                                android:maxLines="2"
-                                android:text="@string/drinks_shop"
-                                android:textSize="7sp"
-                                tools:ignore="MissingPrefix,SmallSp" />
-
-                            <TextView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="80dp"
-                                android:layout_marginTop="15dp"
-                                android:text="@string/oll_cocktails"
-                                android:textColor="@color/black"
-                                android:textSize="9sp"
-                                tools:ignore="SmallSp" />
-
-                            <View
-                                android:layout_width="20dp"
-                                android:layout_height="2dp"
-                                android:layout_marginStart="80dp"
-                                android:layout_marginTop="98dp"
-                                android:background="@color/colorPrimary" />
-
-
-                        </androidx.cardview.widget.CardView>
-
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="240dp"
-                            android:layout_height="130dp"
-                            android:layout_margin="5dp"
-                            app:cardCornerRadius="6dp"
-                            app:cardElevation="3dp" />
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="240dp"
-                            android:layout_height="130dp"
-                            android:layout_margin="5dp"
-                            app:cardCornerRadius="6dp"
-                            app:cardElevation="3dp" />
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="240dp"
-                            android:layout_height="130dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="25dp"
-                            app:cardCornerRadius="6dp"
-                            app:cardElevation="3dp" />
-
-
-                    </LinearLayout>
-
-                </HorizontalScrollView>
-
-            </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayout7"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="80dp"
                 android:orientation="horizontal" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

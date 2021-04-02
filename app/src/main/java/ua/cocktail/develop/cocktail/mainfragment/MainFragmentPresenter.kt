@@ -9,6 +9,7 @@ class MainFragmentPresenter : BasicPresenter<MainFragmentView?>(){
     override fun onEnterScope() {
         super.onEnterScope()
         getView()?.navigateToHome()
+        getView()?.setUpUI()
     }
     fun onNavigateToDrinksFragment(){
         getView()?.onNavigateToDrinksFragment()
@@ -19,12 +20,15 @@ class MainFragmentPresenter : BasicPresenter<MainFragmentView?>(){
             R.id.primaryHome -> {
                 getView()?.navigateToHome()
             }
-
             R.id.primaryDelivery -> {
                 getView()?.navigateToDelivery()
             }
-
-            else -> getView()?.navigateToDelivery()
+            R.id.primaryShopping -> {
+                getView()?.navigateToShop()
+            }
+            R.id.primaryMenu -> {
+                getView()?.navigateToMenu()
+            }
         }
     }
 }

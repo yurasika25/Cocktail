@@ -5,15 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_navigation_main.*
 import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.drinks.DrinksFragment
 import ua.cocktail.develop.cocktail.delivery.DeliveryFragment
 import ua.cocktail.develop.cocktail.home.HomeFragment
+import ua.cocktail.develop.cocktail.menu.MenuFragment
+import ua.cocktail.develop.cocktail.shop.ShopFragment
 
 
 class MainFragment : Fragment(), MainFragmentView {
+
 
     private var presenter: MainFragmentPresenter? = null
 
@@ -42,10 +44,6 @@ class MainFragment : Fragment(), MainFragmentView {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_navigation_main, container, false)
         presenter = MainFragmentPresenter()
-                val btnFloat  = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        btnFloat.setOnClickListener {
-            presenter!!.onNavigateToDrinksFragment()
-        }
         return view
     }
 
@@ -71,8 +69,30 @@ class MainFragment : Fragment(), MainFragmentView {
         val ft = fm.beginTransaction()
         ft.replace(R.id.containerNavigation, fragment)
         ft.commit()
-
     }
+
+    override fun navigateToShop() {
+        val fragment: Fragment = ShopFragment()
+        val fm = requireActivity().supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.replace(R.id.containerNavigation, fragment)
+        ft.commit()
+    }
+
+    override fun setUpUI() {
+        floatingActionButton.setOnClickListener {
+            presenter!!.onNavigateToDrinksFragment()
+        }
+    }
+
+    override fun navigateToMenu() {
+        val fragment: Fragment = MenuFragment()
+        val fm = requireActivity().supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.replace(R.id.containerNavigation, fragment)
+        ft.commit()
+    }
+
     override fun onNavigateToDrinksFragment() {
         val fragment: Fragment = DrinksFragment.newInstance()
         val fm = requireActivity().supportFragmentManager

@@ -42,19 +42,13 @@ class DrinksFragment : Fragment(), DrinksFragmentView,
 
     }
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_drinks, container, false)
 
-
         presenter = DrinksFragmentPresenter()
-//        val btnFloat  = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
-//        btnFloat.setOnClickListener {
-//            presenter!!.onFilterClickedTwo()
-//        }
+
         val toolBar = view.findViewById<Toolbar>(R.id.toolbar)
         toolBar.setOnMenuItemClickListener {
             presenter!!.onFilterButtonClicked()

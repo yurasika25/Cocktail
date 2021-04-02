@@ -13,7 +13,7 @@ class ShopFragment : Fragment(), ShopFragmentView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view: View = inflater.inflate(R.layout.fragment_delivery, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_shop, container, false)
 
 //        val tBar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarEmpty)
 //        tBar.setNavigationOnClickListener { requireActivity().onBackPressed() }

@@ -12,7 +12,7 @@
         android:id="@+id/primaryShopping"
         android:icon="@drawable/ic_task_btn"/>
 
-    <item android:title="@string/labelMenyHistory"
+    <item android:title="@string/labelMenuHistory"
         android:id="@+id/primaryMenu"
         android:icon="@drawable/ic_menu_btn"/>
 

@@ -7,6 +7,16 @@
     android:background="@color/colorBackground">
 
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="120dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarEmpty"
         android:layout_width="match_parent"
@@ -16,72 +26,119 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Delivery address"
+        app:title="Адреса доставки"
         app:titleTextColor="@color/black" />
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="380dp"
         android:layout_height="140dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="75dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Місто:"
-            android:layout_marginTop="9sp"
             android:layout_marginStart="20dp"
-            android:textSize="12sp"/>
-
-
+            android:layout_marginTop="9sp"
+            android:text="@string/city"
+            android:textSize="12sp" />
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="@string/sity"
-            android:textStyle="bold"
-            android:maxLines="1"
-            android:maxEms="25"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:inputType="textCapSentences"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/city"
+            android:inputType="textCapSentences"
+            android:maxEms="25"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/delivery_drinks"
-            android:layout_marginTop="66dp"
             android:layout_marginStart="20dp"
-            android:textSize="12sp"/>
+            android:layout_marginTop="66dp"
+            android:text="@string/delivery_drinks"
+            android:textSize="12sp" />
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextViews"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="75dp"
             android:hint="@string/delivery_drinks"
-            android:layout_marginStart="16dp"
-            android:textStyle="bold"
-            android:maxEms="25"
-            android:textCursorDrawable="@drawable/color_cursor"
             android:inputType="textCapSentences"
+            android:maxEms="25"
+            android:minHeight="48dp"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_radius"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="120dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="120dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="117dp"
+
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_confirm" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

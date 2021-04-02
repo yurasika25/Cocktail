@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/menu_filter"
-        app:title="Drinks"
+        app:title="Напої"
         app:titleTextColor="@color/black" />
 
     <androidx.recyclerview.widget.RecyclerView
