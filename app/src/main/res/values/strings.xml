@@ -24,6 +24,7 @@
     <string name="drinks_shop">Пропозиція не підсумовується з іншими акціями в "DrinksShop" та діє за наявності</string>
     <string name="sort">Sort</string>
     <string name="todo">TODO</string>
+    <string name="title_text">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</string>
     <string name="date">з 11.03.21 по 24.03.21</string>
     <string name="oll_cocktails">знижка на будь-які коктейлі ТМ Топпінг</string>
     <string name="discount_prices">-15%</string>
@@ -39,6 +40,8 @@
     <string name="confirm">Підтвердити</string>
     <string name="shopping_drinks">Тут відображатимуться Ваші покупки</string>
     <string name="photo">photo</string>
+    <string name="on">on</string>
+    <string name="off">Off</string>
     <string name="button">ПОВНІ ПРАВИЛА УЧАСТІ В ПРОГРАМІ "ВЛАСНИЙ РАХУНОК"</string>
     <string name="rules">Правила участі у Програмі «Власний Рахунок»
 09.06.2020
@@ -236,4 +239,42 @@ Mastercard (Mastercard World), емітована в установленому 
 Бали з інших Рахунків Учасника на один, що буде самостійно визначено Менеджером.
 
 </string>
+    <string name="charitable">Благодійність</string>
+    <string name="orders">Мої замовленя</string>
+    <string name="person_info">Персональна інформація</string>
+    <string name="about_own_bill">Про \"Власний рахунок\"</string>
+    <string name="сollector">Збиралочка</string>
+    <string name="payment_cards">Платіжні картки</string>
+    <string name="support">Підтримка</string>
+    <string name="_8">18</string>
+    <string name="support_view">Зв\'яжіться з нами зручним для вас способом</string>
+    <string name="telegram">Telegram</string>
+    <string name="viber">Viber</string>
+    <string name="program_drinksshop_ua">program@drinksShop.ua</string>
+    <string name="hotline">Гаряча лінія</string>
+    <string name="_0_800_301_707">0 800 301 707</string>
+    <string name="call">Дзвінки безкоштовні з усіх телефонів на території України</string>
+    <string name="offer_support">Відгук про роботу мобільного додатку "Drinks Shop"</string>
+    <string name="sent_email">Відправити лист…</string>
+    <string name="support_email">yrasika80@gmail.com</string>
+    <string name="no_mail">No mail app found!!!</string>
+    <string name="available_bali">Ваші доступні бали</string>
+    <string name="_186004">18604</string>
+    <string name="help">Як допомогти?</string>
+    <string name="help_sum">Сума допомоги</string>
+    <string name="_0">0 грн</string>
+    <string name="view_one">1. Виберіть благодійну кампанію.</string>
+    <string name="child_help">Допомога дітям</string>
+    <string name="number_one">1</string>
+    <string name="view_two">2. Перерахуйте бали на добро.</string>
+    <string name="view_three">3. Ми конвертуємо бали в бонуси.</string>
+    <string name="view_four"> 4. Благодійний фонд застосовує бонуси,
+        купує товари та передає сімям, що потребують допомоги.</string>
+    <string name="view_five">5. Надаємо звіт у соцмережах, а також на сайті "DrinksShop".</string>
+    <string name="list_to_number">Список за номерами</string>
+    <string name="scroll">scroll</string>
+    <string name="person_info_card">Персональні дані</string>
+    <string name="contact_data">Контактні дані</string>
+    <string name="address">Адреса</string>
+    <string name="more_info">Читати детальніше…</string>
 </resources>

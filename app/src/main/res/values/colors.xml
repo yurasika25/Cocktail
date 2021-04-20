@@ -17,6 +17,7 @@
 
     <color name="colorBackground">#F8F8F8</color>
     <color name="subtitleTextColor">#5C6675</color>
+    <color name="chary_color">#3E3E3E</color>
 
     <color name="primaryTextColor">#202020</color>
     <color name="colorSurface">#F0F0F3</color>
@@ -50,6 +51,7 @@
     <color name="customPrimary">#d50000</color>
     <color name="customPrimaryDark">#b71c1c</color>
     <color name="customAccent">#ffc400</color>
+    <color name="customYellow">#E9EF35</color>
 
     <!-- Other Colors -->
     <color name="blackLight">#99000000</color>
@@ -59,9 +61,8 @@
     <color name="red">#f44336</color>
     <color name="green">#7fb546</color>
     <color name="transparent">#00000000</color>
-    <color name="lightgrey">#FFE0E0E0</color>
     <color name="light200">#FFEEEEEE</color>
-    <color name="light100">#FFF5F5F5</color>
+    <color name="light100">#FFFDFD</color>
     <color name="darkBlue">#1976d2</color> <!-- 700 -->
     <color name="materialBlue">#448aff</color>  <!-- 200 -->
     <color name="materialBlue900">#2979ff</color> <!-- 400 -->
@@ -155,6 +156,6 @@
 
     <color name="routeEnd" > #2F80ED</color>
     <color name="routeStart" > #F2994A</color>
-    <color name="routeMiddleware" > #808080</color>
+    <color name="routeMiddleware" >#C5C4C4</color>
 
 </resources>

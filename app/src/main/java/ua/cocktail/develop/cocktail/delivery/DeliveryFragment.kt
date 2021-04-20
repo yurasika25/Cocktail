@@ -36,10 +36,6 @@ class DeliveryFragment : Fragment(), RegisterFragmentView {
         button_confirm.setOnClickListener {
             button_confirm.isEnabled = false
         }
-        button1.setOnClickListener {
-            Toast.makeText(requireActivity(),"jkjjhklj",Toast.LENGTH_SHORT).show()
-        }
-
     }
 
     override fun onResume() {

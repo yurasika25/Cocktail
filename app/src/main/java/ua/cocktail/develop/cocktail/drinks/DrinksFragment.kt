@@ -8,7 +8,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_drinks.*
 import ua.cocktail.develop.cocktail.adapter.DrinksAdapter
 import ua.cocktail.develop.cocktail.filters.FilterMapCallback

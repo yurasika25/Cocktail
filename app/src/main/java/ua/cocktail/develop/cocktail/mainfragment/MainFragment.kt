@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_navigation_main.*
 import ua.cocktail.develop.cocktail.R
@@ -13,9 +14,7 @@ import ua.cocktail.develop.cocktail.home.HomeFragment
 import ua.cocktail.develop.cocktail.menu.MenuFragment
 import ua.cocktail.develop.cocktail.shop.ShopFragment
 
-
 class MainFragment : Fragment(), MainFragmentView {
-
 
     private var presenter: MainFragmentPresenter? = null
 
@@ -27,6 +26,7 @@ class MainFragment : Fragment(), MainFragmentView {
             return fragment
         }
     }
+
     override fun onPause() {
         super.onPause()
         presenter?.exitFromView()
@@ -37,13 +37,16 @@ class MainFragment : Fragment(), MainFragmentView {
         presenter?.enterWithView(this)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        presenter = MainFragmentPresenter()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_navigation_main, container, false)
-        presenter = MainFragmentPresenter()
         return view
     }
 
@@ -90,6 +93,7 @@ class MainFragment : Fragment(), MainFragmentView {
         val fm = requireActivity().supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.containerNavigation, fragment)
+        ft.addToBackStack(null)
         ft.commit()
     }
 

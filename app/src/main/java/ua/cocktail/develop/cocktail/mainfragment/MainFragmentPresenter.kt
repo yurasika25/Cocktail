@@ -6,16 +6,21 @@ import ua.cocktail.develop.cocktail.mvp.BasicPresenter
 
 class MainFragmentPresenter : BasicPresenter<MainFragmentView?>(){
 
+    private var lastMenuItem : MenuItem? = null
+
     override fun onEnterScope() {
         super.onEnterScope()
         getView()?.navigateToHome()
         getView()?.setUpUI()
+        lastMenuItem?.let { onNavigationClicked(it) }
     }
+
     fun onNavigateToDrinksFragment(){
         getView()?.onNavigateToDrinksFragment()
     }
 
     fun onNavigationClicked(item: MenuItem) {
+        lastMenuItem = item
         when (item.itemId) {
             R.id.primaryHome -> {
                 getView()?.navigateToHome()

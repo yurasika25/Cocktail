@@ -3,30 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable-v24/back.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable-v24/back.xml" value="0.16" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable-v24/ic_right_support.xml" value="1.0" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/bg_transparent.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/bonus_circle.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/btn_radius.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/circle_green.xml" value="0.33828125" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/color_cursor.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/filter_al.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/home_btn.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/ic_bottom.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/ic_edit_two.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/ic_history.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/ic_right.xml" value="1.0" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/activity_main.xml" value="0.209375" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_bonus.xml" value="0.31574074074074077" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_delivery.xml" value="0.22" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/drawable/ic_top.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/activity_email.xml" value="0.33" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/activity_main.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_bali.xml" value="0.14" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_bonus.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_cash.xml" value="0.2046875" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_charity.xml" value="0.25" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_delivery.xml" value="1.0" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_drinks.xml" value="0.1" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_filters.xml" value="0.2" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_filters.xml" value="0.12" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_help.xml" value="0.15" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_home.xml" value="0.13980263157894737" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_navigation_main.xml" value="0.25" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_rules.xml" value="0.18" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_numbers.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_person.xml" value="0.22" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_rules.xml" value="1.0" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_scanner.xml" value="0.209375" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_shop.xml" value="0.22" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragmet_menu.xml" value="0.25" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/item_drinks.xml" value="0.2" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragment_shop.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragmet_menu.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/fragmet_support.xml" value="1.0" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/help_fragment_one.xml" value="0.21794871794871795" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/help_fragment_two.xml" value="0.25" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/item_drinks.xml" value="1.0" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/item_filters.xml" value="0.209375" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/item_header.xml" value="0.209375" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/item_header.xml" value="0.33" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/item_number.xml" value="0.16" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/lite.xml" value="0.18" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/layout/register.xml" value="0.25857275254865614" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu-v26/main_filter.xml" value="0.209375" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu-v26/main_filter_two.xml" value="0.209375" />
@@ -34,9 +51,10 @@
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu-v26/menu_filter_new.xml" value="0.209375" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/main_filter.xml" value="0.25" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/main_filter_two.xml" value="0.209375" />
-        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/menu_filter.xml" value="0.33" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/menu_filter.xml" value="0.2" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/menu_main.xml" value="0.209375" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/menu_new_two.xml" value="0.209375" />
+        <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/menu_person.xml" value="0.22" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/menu_scaner.xml" value="0.25" />
         <entry key="..\:/Users/krist/Cocktail3/app/src/main/res/menu/primary.xml" value="0.209375" />
       </map>

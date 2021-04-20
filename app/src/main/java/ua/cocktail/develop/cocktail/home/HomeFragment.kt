@@ -3,28 +3,28 @@ package ua.cocktail.develop.cocktail.home
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import ua.cocktail.develop.cocktail.R
+import ua.cocktail.develop.cocktail.bali.BaliFragment
 import ua.cocktail.develop.cocktail.bonus.BonusFragment
+import ua.cocktail.develop.cocktail.cashflow.CashFragment
 
 class HomeFragment : Fragment(), HomeFragmentView {
 
     private var presenter: HomeFragmentPresenter? = null
 
-
     override fun onPause() {
         super.onPause()
         presenter!!.exitFromView()
-
     }
 
     override fun onResume() {
@@ -32,9 +32,35 @@ class HomeFragment : Fragment(), HomeFragmentView {
         presenter!!.enterWithView(this)
     }
 
-
     override fun navigateToBonus() {
         val fragment: Fragment = BonusFragment()
+        val fm = requireActivity().supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.replace(R.id.mainContainer, fragment)
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun navigateToHome() {
+        val fragment: Fragment = HomeFragment()
+        val fm = requireActivity().supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.replace(R.id.containerNavigation, fragment)
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun navigateToCash() {
+        val fragment: Fragment = CashFragment()
+        val fm = requireActivity().supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.replace(R.id.mainContainer, fragment)
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun navigateToBali() {
+        val fragment: Fragment = BaliFragment()
         val fm = requireActivity().supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.mainContainer, fragment)
@@ -50,13 +76,26 @@ class HomeFragment : Fragment(), HomeFragmentView {
 
         presenter = HomeFragmentPresenter()
 
+        val swipeS = view.findViewById<SwipeRefreshLayout>(R.id.swipe_id)
+        swipeS.setOnRefreshListener {
+            Handler ().postDelayed({
+                swipeS.isRefreshing = true},1000)
+            presenter!!.pullToRefreshReceived()
+            }
+
+        val btnConsBonus = view.findViewById<View>(R.id.constrain_btn_bonus)
+        btnConsBonus.setOnClickListener { presenter!!.onCashButtonClicked()
+        }
+        val btnConsBali = view.findViewById<View>(R.id.constrain_btn_bali)
+        btnConsBali.setOnClickListener { presenter!!.onBaliButtonClicked()
+        }
+
         val btnBonus = view.findViewById<ImageView>(R.id.bonus_btn_id)
         btnBonus.setOnClickListener {
             presenter!!.onBonusButtonClicked()
         }
 
         val photoButton = view.findViewById<View>(R.id.vectorID)
-
         photoButton.setOnClickListener {
             if (ContextCompat.checkSelfPermission(
                     requireActivity(),

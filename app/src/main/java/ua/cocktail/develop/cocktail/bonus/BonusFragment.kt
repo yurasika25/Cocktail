@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import ua.cocktail.develop.cocktail.R
+import ua.cocktail.develop.cocktail.mainfragment.MainFragment
 import ua.cocktail.develop.cocktail.rules.RulesFragment
+import ua.cocktail.develop.cocktail.support.SupportFragment
 
 class BonusFragment : Fragment(), BonusFragmentView {
 
@@ -33,11 +35,15 @@ class BonusFragment : Fragment(), BonusFragmentView {
         presenter = BonusFragmentPresenter()
 
         val btnRules = view.findViewById<Button>(R.id.btn_rules_id)
-        btnRules.setOnClickListener { presenter!!.onNavigateClickRules() }
+        btnRules.setOnClickListener { presenter!!.onNavigateClickRules()
+
+        }
 
         val tBar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarBonus)
 
-        tBar.setNavigationOnClickListener { requireActivity().onBackPressed() }
+        tBar.setNavigationOnClickListener { requireActivity().onBackPressed()
+
+        }
         return view
     }
 
@@ -46,6 +52,7 @@ class BonusFragment : Fragment(), BonusFragmentView {
         val fm = requireActivity().supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.mainContainer, fragment)
+        ft.addToBackStack(MainFragment.toString())
         ft.commit()
     }
 }

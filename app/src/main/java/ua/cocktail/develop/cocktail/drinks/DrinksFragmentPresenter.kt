@@ -104,7 +104,7 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
     }
 
     fun onApplyFiltersReceived(map: HashMap<String, Boolean>) {
-        val filter = ArrayList<FiltersModel>(filterList.keys)
+        val filter = ArrayList(filterList.keys)
         filter.forEach {
             if (map.containsKey(it.strCategory)) {
                 filterList[it] = map[it.strCategory] == true

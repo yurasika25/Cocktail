@@ -29,25 +29,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_scrollFlags="scroll|enterAlways">
 
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/homeBottomNav"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_gravity="bottom"
-                android:background="@drawable/bg_transparent"
-                android:theme="@style/CocktailDefaults"
-                app:elevation="4dp"
-                android:animateLayoutChanges="false"
-                android:clickable="true"
-                app:itemIconSize="25dp"
-                app:itemTextAppearanceActive="@style/BottomNavigation.Text.Active"
-                app:itemTextAppearanceInactive="@style/BottomNavigation.Text.Inactive"
-                app:labelVisibilityMode="labeled"
-                app:layout_constraintBottom_toBottomOf="@+id/homeBottomBar"
-                app:layout_constraintEnd_toEndOf="@+id/homeBottomBar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:menu="@menu/primary"
-                android:focusable="true" />
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/homeBottomNav"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_transparent"
+                    android:theme="@style/CocktailDefaults"
+                    app:elevation="4dp"
+                    android:animateLayoutChanges="false"
+                    android:clickable="true"
+                    app:itemIconSize="25dp"
+                    app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Caption"
+                    app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.Caption"
+                    app:labelVisibilityMode="labeled"
+                    app:layout_constraintBottom_toBottomOf="@+id/homeBottomBar"
+                    app:layout_constraintEnd_toEndOf="@+id/homeBottomBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:menu="@menu/primary"
+                    android:focusable="true" />
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
