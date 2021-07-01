@@ -110,46 +110,46 @@
                 tools:ignore="ImageContrastCheck" />
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:id="@+id/supportEmail"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@color/white"
-                android:clickable="true"
-                android:focusable="true"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout22">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/supportEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout22">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:contentDescription="@string/todo"
-                    android:padding="8dp"
-                    android:src="@drawable/em"
-                    tools:ignore="ImageContrastCheck" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/todo"
+                android:padding="8dp"
+                android:src="@drawable/em"
+                tools:ignore="ImageContrastCheck" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="59dp"
-                    android:layout_marginTop="18dp"
-                    android:paddingTop="1dp"
-                    android:text="@string/program_drinksshop_ua"
-                    android:textAppearance="?textAppearanceBody2"
-                    android:textColor="@color/Black"
-                    android:textSize="18sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="18dp"
+                android:paddingTop="1dp"
+                android:text="@string/program_drinksshop_ua"
+                android:textAppearance="?textAppearanceBody2"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginEnd="20dp"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/ic_right_support"
-                    tools:ignore="ImageContrastCheck" />
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_right_support"
+                tools:ignore="ImageContrastCheck" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -165,9 +165,9 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
                 android:contentDescription="@string/todo"
                 android:padding="9dp"
-                android:layout_marginBottom="5dp"
                 android:rotation="18"
                 android:src="@drawable/ph"
                 tools:ignore="ImageContrastCheck" />
@@ -190,10 +190,10 @@
                 android:layout_marginStart="59dp"
                 android:layout_marginTop="31dp"
                 android:text="@string/_0_800_301_707"
-                android:textStyle="bold"
                 android:textAppearance="?textAppearanceBody2"
                 android:textColor="@color/Black"
-                android:textSize="21sp" />
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="160dp"
@@ -226,13 +226,13 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="230dp"
-        android:gravity="center"
-        android:textSize="17sp"
-        android:textColor="@color/darkLight"
         android:layout_height="wrap_content"
         android:layout_marginStart="163dp"
         android:layout_marginEnd="190dp"
+        android:gravity="center"
         android:text="@string/support_view"
+        android:textColor="@color/darkLight"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

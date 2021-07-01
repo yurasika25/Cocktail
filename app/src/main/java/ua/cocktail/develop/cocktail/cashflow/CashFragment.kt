@@ -10,8 +10,10 @@ import kotlinx.android.synthetic.main.fragment_cash.*
 import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.help.HelpFragmentPresenter
 import ua.cocktail.develop.cocktail.help.HelpFragmentView
+import android.content.Intent
 
-class CashFragment : Fragment(), HelpFragmentView {
+
+class CashFragment : Fragment(), CashFragmentView {
 
 
     override fun onPause() {
@@ -24,7 +26,7 @@ class CashFragment : Fragment(), HelpFragmentView {
         presenter!!.enterWithView(this)
     }
 
-    private var presenter: HelpFragmentPresenter? = null
+    private var presenter: CashFragmentPresenter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,12 +34,12 @@ class CashFragment : Fragment(), HelpFragmentView {
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_cash, container, false)
 
-        presenter = HelpFragmentPresenter()
+        presenter = CashFragmentPresenter()
 
         val backLightSeekBar = view.findViewById<ImageView>(R.id.seekBar)
         backLightSeekBar.setOnClickListener {
 
-            backLightSeekBar.setImageResource(R.drawable.ic_flas_one)
+            backLightSeekBar.setImageResource(R.drawable.ic_flash_one)
             seekBarTwo.visibility = View.VISIBLE
             backLightSeekBar.visibility = View.GONE
             val params = requireActivity().window.attributes
@@ -46,7 +48,7 @@ class CashFragment : Fragment(), HelpFragmentView {
         }
         val backLightSeekBarTwo = view.findViewById<ImageView>(R.id.seekBarTwo)
         backLightSeekBarTwo.setOnClickListener {
-            backLightSeekBarTwo.setImageResource(R.drawable.ic_flas_two)
+            backLightSeekBarTwo.setImageResource(R.drawable.ic_flash_two)
             seekBar.visibility = View.VISIBLE
             backLightSeekBarTwo.visibility = View.GONE
             val params = requireActivity().window.attributes
@@ -55,14 +57,12 @@ class CashFragment : Fragment(), HelpFragmentView {
         }
 
         val tBar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarCash)
-        tBar.setNavigationOnClickListener { requireActivity().onBackPressed()
+        tBar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
         }
-
 
         return view
     }
-
-
 }
 
 

@@ -16,6 +16,7 @@ class NumberFragmentPresenter : BasicPresenter<NumberFragmentView?>() {
         super.onEnterScope()
         fetchData()
     }
+
     @SuppressLint("CheckResult")
     private fun fetchData() {
         listItems.clear()
@@ -27,8 +28,6 @@ class NumberFragmentPresenter : BasicPresenter<NumberFragmentView?>() {
                     listItems.add(it)
                 }
                 getView()?.setUpUI(listItems)
-            }, { error ->
-                error.printStackTrace()
-            })
+            }, { error -> error.printStackTrace() })
     }
 }

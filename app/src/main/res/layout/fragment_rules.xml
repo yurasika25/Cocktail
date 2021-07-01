@@ -9,17 +9,17 @@
         android:layout_height="55dp"
         android:background="@color/white"
         android:elevation="2dp"
-        app:navigationIcon="@drawable/back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back"
         app:title="Про бонус та бали"
         app:titleTextColor="@color/black" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerBonus"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/containerBonus"
         android:background="@color/colorBackground"
         android:padding="5dp">
 
@@ -47,13 +47,13 @@
 
                 <TextView
                     android:id="@+id/view"
-                    android:padding="10dp"
-                    android:gravity="start"
-                    android:textSize="13sp"
-                    android:textColor="@color/black"
-                    android:text="@string/rules"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="@string/rules"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

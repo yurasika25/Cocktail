@@ -13,26 +13,23 @@ class NumberAdapter : RecyclerView.Adapter<NumberAdapter.ViewHolder>() {
 
     private var listItems: ArrayList<NumbersModel> = ArrayList()
 
+    class ViewHolder(item: View) : RecyclerView.ViewHolder(item)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_number, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.item_number, parent, false)
         return ViewHolder(v)
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemList = listItems[position]
-
-        holder.itemView.numbers_title.text = itemList.id
-        holder.itemView.text_title.text = itemList.title
     }
 
     fun addNewData(listItems: List<NumbersModel>) {
         this.listItems.addAll(listItems)
     }
 
-    override fun getItemCount(): Int {
-        return listItems.size
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val itemList = listItems[position]
+        holder.itemView.numbers_title.text = itemList.id
+        holder.itemView.text_title.text = itemList.title
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    override fun getItemCount() = listItems.size
 }
+

@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import ua.cocktail.develop.cocktail.R
@@ -46,7 +47,7 @@ class BaliFragment : Fragment(), BaliFragmentView {
         tBar.setNavigationOnClickListener {
             requireActivity().onBackPressed()
         }
-        imageFlashlight = view.findViewById<View>(R.id.imageFlashlight) as ImageView
+        imageFlashlight = view.findViewById(R.id.imageFlashlight) as AppCompatImageView
 
         val hasCameraFlash =
             requireActivity().packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
@@ -64,15 +65,13 @@ class BaliFragment : Fragment(), BaliFragmentView {
         return view
     }
 
-
-
     private fun flashLightOn() {
         cameraManager = context?.getSystemService(Context.CAMERA_SERVICE) as CameraManager
         try {
             val cameraId = cameraManager.cameraIdList[0]
             cameraManager.setTorchMode(cameraId, true)
             flashLightStatus = true
-            imageFlashlight!!.setImageResource(R.drawable.ic_flas_two)
+            imageFlashlight!!.setImageResource(R.drawable.ic_flash_two)
         } catch (ignored: CameraAccessException) {
         }
     }
@@ -83,7 +82,7 @@ class BaliFragment : Fragment(), BaliFragmentView {
             val cameraId = cameraManager.cameraIdList[0]
             cameraManager.setTorchMode(cameraId, false)
             flashLightStatus = false
-            imageFlashlight!!.setImageResource(R.drawable.ic_flas_one)
+            imageFlashlight!!.setImageResource(R.drawable.ic_flash_one)
         } catch (ignored: CameraAccessException) {
         }
     }

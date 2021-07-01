@@ -1,6 +1,5 @@
 package ua.cocktail.develop.cocktail.menu
 
-import androidx.fragment.app.Fragment
 import ua.cocktail.develop.cocktail.mvp.BasicPresenter
 
 class MenuFragmentPresenter : BasicPresenter<MenuFragmentView?>(){
@@ -37,5 +36,8 @@ class MenuFragmentPresenter : BasicPresenter<MenuFragmentView?>(){
         getView()?.navigateToPerson()
     }
 
+    fun onSearchButtonClicked() {
+        getView()?.navigateToSearch()
+    }
 }
 

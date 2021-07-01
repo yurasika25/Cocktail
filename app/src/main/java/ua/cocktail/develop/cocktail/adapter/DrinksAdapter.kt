@@ -35,8 +35,7 @@ class DrinksAdapter :
             val itemList = listItems[position] as DrinksModel
 
             holder.itemView.drinkTitleTV.text = itemList.strDrink
-            Glide
-                .with(holder.itemView.context)
+            Glide.with(holder.itemView.context)
                 .load(itemList.strDrinkThumb)
                 .centerCrop()
                 .into(holder.itemView.drinkPhotoIV)

@@ -12,7 +12,5 @@ interface MenuFragmentView : BasicView {
     fun navigateToCash ()
     fun navigateToBali ()
     fun navigateToPerson ()
-
-
-
+    fun navigateToSearch()
 }

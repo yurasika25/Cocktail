@@ -13,6 +13,8 @@
     <color name="colorPrimaryDark">#212121</color>
     <color name="colorAccent">#ff6d00</color>
     <color name="darkLight">#FF424242</color>
+    <color name="transparent">#00000000</color>
+
 
 
     <color name="colorBackground">#F8F8F8</color>
@@ -60,7 +62,6 @@
     <color name="custom">#546e7a</color>
     <color name="red">#f44336</color>
     <color name="green">#7fb546</color>
-    <color name="transparent">#00000000</color>
     <color name="light200">#FFEEEEEE</color>
     <color name="light100">#FFFDFD</color>
     <color name="darkBlue">#1976d2</color> <!-- 700 -->

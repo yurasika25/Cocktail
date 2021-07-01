@@ -11,10 +11,11 @@ import kotlinx.android.synthetic.main.fragment_numbers.*
 import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.adapter.NumberAdapter
 import ua.cocktail.develop.cocktail.network.model.NumbersModel
-import java.util.ArrayList
+import java.util.*
 
 class NumberFragment : Fragment(), NumberFragmentView {
 
+    val adapter = NumberAdapter()
     private var presenter: NumberFragmentPresenter? = null
 
     override fun onPause() {
@@ -39,12 +40,12 @@ class NumberFragment : Fragment(), NumberFragmentView {
         return view
     }
 
+
     override fun setUpUI(data: List<NumbersModel>) {
         numberRV.setHasFixedSize(true)
         numberRV.layoutManager = LinearLayoutManager(context)
-        val adapter = NumberAdapter()
         numberRV.adapter = adapter
-        (numberRV.adapter as NumberAdapter).addNewData (ArrayList(data))
+        (numberRV.adapter as NumberAdapter).addNewData(ArrayList(data))
     }
 }
 

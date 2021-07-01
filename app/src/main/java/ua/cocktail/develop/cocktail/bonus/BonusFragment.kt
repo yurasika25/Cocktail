@@ -9,10 +9,17 @@ import androidx.fragment.app.Fragment
 import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.mainfragment.MainFragment
 import ua.cocktail.develop.cocktail.rules.RulesFragment
-import ua.cocktail.develop.cocktail.support.SupportFragment
 
-class BonusFragment : Fragment(), BonusFragmentView {
+open class BonusFragment : Fragment(), BonusFragmentView {
 
+     open val db :String = "On"
+
+    fun getConnection():String{
+        return db
+    }
+
+    override val info : String
+    get() = "Method"
 
     override fun onPause() {
         super.onPause()
@@ -34,6 +41,7 @@ class BonusFragment : Fragment(), BonusFragmentView {
 
         presenter = BonusFragmentPresenter()
 
+
         val btnRules = view.findViewById<Button>(R.id.btn_rules_id)
         btnRules.setOnClickListener { presenter!!.onNavigateClickRules()
 
@@ -46,6 +54,8 @@ class BonusFragment : Fragment(), BonusFragmentView {
         }
         return view
     }
+
+
 
     override fun navigateToRules() {
         val fragment: Fragment = RulesFragment()

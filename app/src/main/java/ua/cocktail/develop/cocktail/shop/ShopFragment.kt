@@ -8,15 +8,14 @@ import androidx.fragment.app.Fragment
 import ua.cocktail.develop.cocktail.R
 
 class ShopFragment : Fragment(), ShopFragmentView {
+
     private var fragmentPresenter: ShopFragmentPresenter? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_shop, container, false)
-
-//        val tBar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarEmpty)
-//        tBar.setNavigationOnClickListener { requireActivity().onBackPressed() }
 
         fragmentPresenter = ShopFragmentPresenter()
         return view
@@ -25,7 +24,6 @@ class ShopFragment : Fragment(), ShopFragmentView {
     override fun onPause() {
         super.onPause()
         fragmentPresenter?.exitFromView()
-
     }
 
     override fun onResume() {

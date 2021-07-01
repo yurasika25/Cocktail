@@ -14,9 +14,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_filter"
         app:navigationIcon="@drawable/back"
         app:title="Рух коштів по бонусу"
-        app:menu="@menu/menu_filter"
         app:titleTextColor="@color/black" />
 
     <ImageView
@@ -24,18 +24,20 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="150dp"
-        android:background="@drawable/ic_flas_one"
+        android:background="@drawable/ic_flash_one"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/seekBarTwo"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="150dp"
-        android:background="@drawable/ic_flas_two"
+        android:background="@drawable/ic_flash_two"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

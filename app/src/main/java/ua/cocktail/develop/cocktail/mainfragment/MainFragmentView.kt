@@ -8,7 +8,7 @@ interface MainFragmentView : BasicView {
     fun onNavigateToDrinksFragment()
     fun navigateToHome()
     fun navigateToShop()
-    fun setUpUI()
+//    fun setUpUI()
     fun navigateToMenu()
 
 

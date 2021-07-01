@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_drinks.*
@@ -35,10 +36,10 @@ class DrinksFragment : Fragment(), DrinksFragmentView,
         presenter?.exitFromView()
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        presenter?.enterWithView(this)
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        presenter?.enterWithView(this)
     }
 
     override fun onCreateView(
@@ -64,15 +65,6 @@ class DrinksFragment : Fragment(), DrinksFragmentView,
         ft.addToBackStack(null)
         ft.commit()
     }
-
-//    override fun navigateToFiltersTwo() {
-//        val fragment: Fragment = FragmentRegister()
-//        val fm = requireActivity().supportFragmentManager
-//        val ft = fm.beginTransaction()
-//        ft.replace(R.id.containerNavigation, fragment)
-//        ft.addToBackStack(null)
-//        ft.commit()
-//    }
 
     override fun setUpUI() {
         adapter = DrinksAdapter()

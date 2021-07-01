@@ -71,7 +71,7 @@
 Гаряча лінія «Сільпо» - адміністративний підрозділ Менеджера, який виконує функції підтримки та
 інформування Учасників з боку Програми, використовуючи різні канали комунікації: телефон (0800301707),
 електронну пошту (program@silpo.ua), чати в месенджері сайту https://silpo.ua/, у Viber (Silpo Chat) та
-Telegramm (@Silpo_Chat_bot).
+Telegram (@Silpo_Chat_bot).
 Держатель Платіжної картки - фізична особа, яка використовує Платіжну картку для ініціювання переказу
 коштів або здійснення інших операцій із застосуванням зазначеної Платіжної картки.
 Картки Програми «Власний Рахунок» - всі фізичні (пластикові або паперові) картки Програми: Тимчасова
@@ -264,7 +264,7 @@ Mastercard (Mastercard World), емітована в установленому 
     <string name="help_sum">Сума допомоги</string>
     <string name="_0">0 грн</string>
     <string name="view_one">1. Виберіть благодійну кампанію.</string>
-    <string name="child_help">Допомога дітям</string>
+    <string name="child_help">ДОПОМОГА ДІТЯМ</string>
     <string name="number_one">1</string>
     <string name="view_two">2. Перерахуйте бали на добро.</string>
     <string name="view_three">3. Ми конвертуємо бали в бонуси.</string>
@@ -277,4 +277,52 @@ Mastercard (Mastercard World), емітована в установленому 
     <string name="contact_data">Контактні дані</string>
     <string name="address">Адреса</string>
     <string name="more_info">Читати детальніше…</string>
+    <string name="help_charity_child">За даними ЮНІСЕФ, внаслідок пандемії
+СОVID-19 у 2020 році в Україні кількість дітей,
+які живуть у бідності, збільшилася на 14 -
+
+1,8 мільйона. «DrinksShop» спільно з БФ «Клуб
+Добродіїв» розпочинає акцію допомоги дітям,
+родини яких опинилися на межі виживання.
+Через новий сервіс у додатку «DrinksShop» ви
+можете віддати свої бали на благодійність.
+Зібрані бали у вигляді бонусів ми передамо
+БФ«Клуб Добродіїв», який реалізує бонуси,
+закупить та доправить товари дітям, що
+опинились на межі виживання.</string>
+    <string name="all_money">Вже зібрано</string>
+    <string name="_473582_52">473582</string>
+    <string name="sent_help">Відправити допомогу</string>
+    <string name="select_or_type_sum">Обреріть або введіть суму балів</string>
+    <string name="_100_1">100 балів = 1 грн</string>
+    <string name="_100">100</string>
+    <string name="camera">Камера</string>
+    <string name="search" translatable="false">Пошук</string>
+    <string name="set1">Захват изображения</string>
+    <string name="set2">Изображение</string>
+    <string name="set3">Запустить камеру</string>
+    <string name="resept">Введіть кількість підписників</string>
+    <string name="hello_world">Привіт світ</string>
+    <string name="type_name" translatable="false">Введіть посаду</string>
+    <string name="type_password" translatable="false">Введіть пароль</string>
+    <string name="_1000" translatable="false">1000</string>
+    <string name="name" translatable="false">Введіть ім\'я</string>
+    <string name="surname" translatable="false">Введіть прізвище</string>
+    <string name="middle_name" translatable="false">Введіть по-батькові</string>
+    <string name="birth_data" translatable="false">Дата народження</string>
+    <string name="surname_hint" translatable="false">Прізвище</string>
+    <string name="name_hint" translatable="false">Ім\'я</string>
+    <string name="middle_name_hint" translatable="false">По-батькові</string>
+    <string name="data" translatable="false">11/08/1996</string>
+    <string name="start" translatable="false">Start</string>
+    <string name="contacts" translatable="false">Контактні дані</string>
+    <string name="number_register" translatable="false">Зареєстрований номер</string>
+    <string name="number_mobile" translatable="false">Мобільний номер</string>
+    <string name="email_register" translatable="false">Електронна адреса</string>
+    <string name="phone_number" translatable="false">Введіть номер телефону</string>
+    <string name="email_address" translatable="false">Введіть електронну адресу</string>
+    <string name="register_number_phone" translatable="false">Зареєстрований номер</string>
+    <string name="save" translatable="false">Зберегти</string>
+    <string name="data_of_birth" translatable="false">Виберіть дату нароження</string>
+    <string name="fortune" translatable="false">Колесо фортуни</string>
 </resources>

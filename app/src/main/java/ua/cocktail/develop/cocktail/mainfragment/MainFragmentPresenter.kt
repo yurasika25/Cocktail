@@ -11,7 +11,6 @@ class MainFragmentPresenter : BasicPresenter<MainFragmentView?>(){
     override fun onEnterScope() {
         super.onEnterScope()
         getView()?.navigateToHome()
-        getView()?.setUpUI()
         lastMenuItem?.let { onNavigationClicked(it) }
     }
 

@@ -10,17 +10,17 @@
         android:layout_height="55dp"
         android:background="@color/white"
         android:elevation="2dp"
-        app:navigationIcon="@drawable/back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back"
         app:title="Про бонус та бали"
         app:titleTextColor="@color/black" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerBonus"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/containerBonus"
         android:background="@color/colorBackground"
         android:padding="5dp">
 
@@ -38,36 +38,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.cardview.widget.CardView
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="850dp"
+                    android:background="@drawable/bonus_d"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="match_parent"
-                        android:layout_height="850dp"
-                        android:background="@drawable/bonus_d"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/btn_rules_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="750dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bonus_circle"
+                    android:text="@string/button"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
-                    <Button
-                        android:id="@+id/btn_rules_id"
-                        android:layout_width="wrap_content"
-                        android:background="@drawable/bonus_circle"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="750dp"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginEnd="50dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
-
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </androidx.core.widget.NestedScrollView>
 

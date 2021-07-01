@@ -5,18 +5,21 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ImageView
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import kotlinx.android.synthetic.main.fragment_home.*
 import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.bali.BaliFragment
 import ua.cocktail.develop.cocktail.bonus.BonusFragment
 import ua.cocktail.develop.cocktail.cashflow.CashFragment
+import ua.cocktail.develop.cocktail.utils.Constants.Companion.CAMERA_REQUEST
+import ua.cocktail.develop.cocktail.utils.Constants.Companion.MY_CAMERA_PERMISSION_CODE
+
 
 class HomeFragment : Fragment(), HomeFragmentView {
 
@@ -32,6 +35,7 @@ class HomeFragment : Fragment(), HomeFragmentView {
         presenter!!.enterWithView(this)
     }
 
+
     override fun navigateToBonus() {
         val fragment: Fragment = BonusFragment()
         val fm = requireActivity().supportFragmentManager
@@ -46,7 +50,6 @@ class HomeFragment : Fragment(), HomeFragmentView {
         val fm = requireActivity().supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.containerNavigation, fragment)
-        ft.addToBackStack(null)
         ft.commit()
     }
 
@@ -81,21 +84,15 @@ class HomeFragment : Fragment(), HomeFragmentView {
             Handler ().postDelayed({
                 swipeS.isRefreshing = true},1000)
             presenter!!.pullToRefreshReceived()
-            }
+        }
 
-        val btnConsBonus = view.findViewById<View>(R.id.constrain_btn_bonus)
-        btnConsBonus.setOnClickListener { presenter!!.onCashButtonClicked()
-        }
-        val btnConsBali = view.findViewById<View>(R.id.constrain_btn_bali)
-        btnConsBali.setOnClickListener { presenter!!.onBaliButtonClicked()
-        }
 
         val btnBonus = view.findViewById<ImageView>(R.id.bonus_btn_id)
         btnBonus.setOnClickListener {
             presenter!!.onBonusButtonClicked()
         }
 
-        val photoButton = view.findViewById<View>(R.id.vectorID)
+        val photoButton = view.findViewById<View>(R.id.vector_scan_ID)
         photoButton.setOnClickListener {
             if (ContextCompat.checkSelfPermission(
                     requireActivity(),

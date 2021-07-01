@@ -8,12 +8,12 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.help_fragment_one.*
 import ua.cocktail.develop.cocktail.R
+import ua.cocktail.develop.cocktail.databinding.HelpFragmentOneBinding
 import ua.cocktail.develop.cocktail.help.HelpFragment
-import ua.cocktail.develop.cocktail.mainfragment.MainFragment
 
+class HelpFragmentOne : Fragment(), CharityFragmentView {
 
-class HelpFragmentOne : Fragment(),CharityFragmentView {
-
+    private var binding: HelpFragmentOneBinding? = null
     private var presenter: CharityFragmentPresenter? = null
 
     override fun onPause() {
@@ -32,12 +32,15 @@ class HelpFragmentOne : Fragment(),CharityFragmentView {
     ): View {
         val view: View = inflater.inflate(R.layout.help_fragment_one, container, false)
         presenter = CharityFragmentPresenter()
+        binding = HelpFragmentOneBinding.bind(view)
+
+        val user = CharityFragment("Як допомогти?")
+        binding!!.imageMain.text = user.onAddAll()
 
         val btnHelpChild = view.findViewById<View>(R.id.coordinator_id_help_child)
         btnHelpChild.setOnClickListener {
             presenter?.onNavigateHelpChild()
         }
-
 
         val top = view.findViewById<ImageButton>(R.id.btn_Image_Add)
         top.setOnClickListener {
@@ -53,7 +56,6 @@ class HelpFragmentOne : Fragment(),CharityFragmentView {
             btn_Image_Add.visibility = View.VISIBLE
             imBtnDelete.visibility = View.GONE
         }
-
         return view
     }
 

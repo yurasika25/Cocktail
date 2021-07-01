@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/vectorID"
+        android:id="@+id/vector_scan_ID"
         android:icon="@drawable/scan_new"
         android:orderInCategory="2"
         android:title="@string/filter_item"

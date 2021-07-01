@@ -1,6 +1,5 @@
 package ua.cocktail.develop.cocktail.mvp
 
-import ua.cocktail.develop.cocktail.charity.HelpFragmentOne
 import java.lang.ref.WeakReference
 
 abstract class BasicPresenter<V : BasicView?> {
@@ -28,4 +27,5 @@ abstract class BasicPresenter<V : BasicView?> {
         onExitScope()
         unbindView()
     }
+
 }
