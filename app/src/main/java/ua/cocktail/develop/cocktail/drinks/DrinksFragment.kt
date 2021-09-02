@@ -6,14 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_drinks.*
-import ua.cocktail.develop.cocktail.R
 import ua.cocktail.develop.cocktail.adapter.DrinksAdapter
 import ua.cocktail.develop.cocktail.filters.FilterMapCallback
 import ua.cocktail.develop.cocktail.filters.FiltersFragment
-import ua.cocktail.develop.cocktail.network.model.DrinksModel
+
+import ua.cocktail.develop.cocktail.R
 
 class DrinksFragment : Fragment(), DrinksFragmentView,
     FilterMapCallback {
@@ -35,8 +36,9 @@ class DrinksFragment : Fragment(), DrinksFragmentView,
         presenter?.exitFromView()
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         presenter?.enterWithView(this)
     }
 
@@ -44,7 +46,9 @@ class DrinksFragment : Fragment(), DrinksFragmentView,
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_drinks, container, false)
+
         presenter = DrinksFragmentPresenter()
+
         val toolBar = view.findViewById<Toolbar>(R.id.toolbar)
         toolBar.setOnMenuItemClickListener {
             presenter!!.onFilterButtonClicked()
@@ -86,5 +90,4 @@ class DrinksFragment : Fragment(), DrinksFragmentView,
     override fun onApplyClicked(filterMap: HashMap<String, Boolean>) {
         presenter!!.onApplyFiltersReceived(filterMap)
     }
-
 }

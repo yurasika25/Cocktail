@@ -20,7 +20,5 @@ class FiltersFragmentPresenter : BasicPresenter<FiltersFragmentView?>() {
     fun onFiltersReceived(filter: String, isChecked: Boolean) {
         filterMap[filter] = isChecked
     }
-
-
 }
 

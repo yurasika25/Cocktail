@@ -1,5 +1,6 @@
 package ua.cocktail.develop.cocktail.drinks
 
+import android.annotation.SuppressLint
 import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -40,6 +41,7 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
         fetchDrinksData(currentPage)
     }
 
+    @SuppressLint("CheckResult")
     private fun fetchDrinksData(page: Int) {
         isLoading = true
         if (page == 0) {
@@ -64,6 +66,7 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
             })
     }
 
+    @SuppressLint("CheckResult")
     private fun fetchFiltersData() {
         repository.getFilters()
             .observeOn(AndroidSchedulers.mainThread())
@@ -80,7 +83,7 @@ class DrinksFragmentPresenter : BasicPresenter<DrinksFragmentView?>() {
     }
 
     fun onApplyFiltersReceived(map: HashMap<String, Boolean>) {
-        val filter = ArrayList<FiltersModel>(filterList.keys)
+        val filter = ArrayList(filterList.keys)
         filter.forEach {
             if (map.containsKey(it.strCategory)) {
                 filterList[it] = map[it.strCategory] == true

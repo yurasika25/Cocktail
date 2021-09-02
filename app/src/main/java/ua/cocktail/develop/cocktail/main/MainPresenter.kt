@@ -6,7 +6,7 @@ class MainPresenter : BasicPresenter<MainView?>() {
 
     override fun onEnterScope() {
         super.onEnterScope()
-        getView()?.onNavigateToDrinksFragment()
+        getView()?.goToMainFragment()
     }
 }
 

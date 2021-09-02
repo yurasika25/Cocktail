@@ -27,4 +27,5 @@ abstract class BasicPresenter<V : BasicView?> {
         onExitScope()
         unbindView()
     }
+
 }

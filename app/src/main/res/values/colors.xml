@@ -8,5 +8,155 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
     <color name="Black">#000000</color>
+    <color name="my">#8B97DA</color>
+    <color name="colorPrimary">#4267B2</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#ff6d00</color>
+    <color name="darkLight">#FF424242</color>
+    <color name="transparent">#00000000</color>
+
+
+
+    <color name="colorBackground">#F8F8F8</color>
+    <color name="subtitleTextColor">#5C6675</color>
+    <color name="chary_color">#3E3E3E</color>
+
+    <color name="primaryTextColor">#202020</color>
+    <color name="colorSurface">#F0F0F3</color>
+    <color name="colorBackgroundGray">#808080</color>
+    <color name="colorGreyTextArea">#eeeeee</color>
+
+
+    <color name="colorMainWhite">#ffffff</color>
+    <color name="colorGreyIo">#6E8AA6</color>
+    <color name="colorGreen">#21A453</color>
+    <color name="colorYellow">#FFC043</color>
+    <color name="colorRed">#D44333</color>
+    <color name="colorGreenAdditional">#27AE60</color>
+
+    <color name="textGrey">#5C6675</color>
+    <color name="textBlack">#202020</color>
+
+
+    <!-- Basic Colors -->
+    <color name="customColorPrimary">#008577</color>
+    <color name="customColorPrimaryDark">#00574B</color>
+    <color name="cCPDLight">#E8212121</color>
+    <color name="customColorAccent">#D81B60</color>
+
+    <!-- Insta Colors -->
+    <color name="instaPrimary">#ffffff</color>
+    <color name="instaDark">#e0e0e0</color>
+    <color name="instaAccent">#42a5f5</color>
+
+    <!-- Custom1 Colors -->
+    <color name="customPrimary">#d50000</color>
+    <color name="customPrimaryDark">#b71c1c</color>
+    <color name="customAccent">#ffc400</color>
+    <color name="customYellow">#E9EF35</color>
+
+    <!-- Other Colors -->
+    <color name="blackLight">#99000000</color>
+    <color name="fontColor">#616161</color>
+    <color name="light500">#FF9E9E9E</color>
+    <color name="custom">#546e7a</color>
+    <color name="red">#f44336</color>
+    <color name="green">#7fb546</color>
+    <color name="light200">#FFEEEEEE</color>
+    <color name="light100">#FFFDFD</color>
+    <color name="darkBlue">#1976d2</color> <!-- 700 -->
+    <color name="materialBlue">#448aff</color>  <!-- 200 -->
+    <color name="materialBlue900">#2979ff</color> <!-- 400 -->
+    <color name="blueTransparent">#28448aff</color>
+    <color name="blueTransparentDark">#B9448AFF</color>
+    <color name="blueAccent">#536dfe</color>
+    <color name="blue">#8c9eff</color>
+    <color name="amber">#FFFFAB00</color>
+    <color name="amber_trans">#32FFAB00</color>
+    <color name="dark">#FFE0E0E0</color>
+
+    <color name="purple">#aa00ff</color>
+    <color name="purpleLight">#59AA00FF</color>
+    <color name="purpleAccent">#6200ea</color>
+    <color name="purpleDark">#4C00D5</color>
+    <color name="cranePurpleDark">#5c1349</color>
+    <color name="cranePurple">#FF6E1958</color>
+    <color name="pink">#f06292</color>
+    <color name="material_purple">#e1bee7</color>
+    <color name="icon_blue">#448aff</color>
+    <color name="indigo_blue">#FF1A237E</color>
+    <color name="darkBlue2">#03061B</color>
+    <color name="indigo700">#FF303F9F</color>
+
+
+    <color name="basilPrimary">#fffde7</color>
+    <color name="basilPrimaryDark">#fff3e0</color>
+    <color name="basilAccent">#d84315</color>
+    <color name="basilTextPrimary">#37474f</color>
+    <color name="basilTextSecondary">#43a047</color>
+    <color name="basilTextAccent">#c8e6c9</color>
+    <color name="greenAccent">#69f0ae</color>
+
+
+    <color name="whatsAppPrimary">#00695c</color>
+    <color name="whatsAppDark">#004d40</color>
+    <color name="whatsAppAccent">#25D366</color>
+
+    <color name="colorPrimary2">#3F51B5</color>
+    <color name="colorPrimaryDark2">#26A773</color>
+    <color name="colorAccent2">#1D3F65</color>
+
+    <color name="colorGrey">#c2c2c2</color>
+
+
+    <color name="shrineColorPrimary">#E0E0E0</color>
+    <color name="shrineColorPrimaryDark">#FBB8AC</color>
+    <color name="shrineColorAccent">#FEDBD0</color>
+
+    <color name="green1">#43a047</color>
+    <color name="greenTrans">#c8e6c9</color>
+
+    <!-- Rally Colors -->
+    <color name="rallyStatusBar">#27272F</color>
+    <color name="rallyBackground">#33333D</color>
+    <color name="rallyCard">#373740</color>
+
+    <color name="rallyGreen">#1EB980</color>
+    <color name="rallyGreenLight">#37EFBA</color>
+    <color name="rallyDarkLight">#007D51</color>
+    <color name="rallyDarkGreen">#045D56</color>
+    <color name="rallyOrange">#FF6859</color>
+    <color name="rallyYellow">#FFCF44</color>
+    <color name="rallyPurple">#B15DFF</color>
+    <color name="rallyBlue">#72DEFF</color>
+
+    <color name="materialRed">#ff5252</color>
+    <color name="redTrans">#ffcdd2</color>
+    <color name="resTransDark">#CDFF5252</color>
+
+    <color name="replyPrimary">#344955</color>
+    <color name="replyPrimaryDark">#13131f</color>
+    <color name="replyPrimaryLight">#1d1f2b</color>
+    <color name="replyAccent">#12ead3</color>
+
+    <color name="colorGreenLight">#2ea15f</color>
+    <color name="yellows">#ffff00</color>
+    <color name="colorGreyMain">#808080</color>
+    <color name="colorToolbarBg">#F0F0F3</color>
+    <color name="headerTxtColor">#5C6675</color>
+    <color name="colorTimelineStart">#F2C94C</color>
+    <color name="colorTimeLineEnd">#4267B2</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="blogDefaultCategoryColor">#4267B2</color>
+
+
+    <color name="routeEnd" > #2F80ED</color>
+    <color name="routeStart" > #F2994A</color>
+    <color name="routeMiddleware" >#C5C4C4</color>
 
 </resources>

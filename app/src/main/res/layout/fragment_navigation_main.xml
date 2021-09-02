@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drinksContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/homeBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="false"
+        app:backgroundTint="?colorSurface"
+        app:buttonGravity="center_vertical"
+        app:contentInsetStart="0dp"
+        app:elevation="4dp"
+        app:fabAlignmentMode="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/homeBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="false"
+            android:background="@drawable/bg_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/CocktailDefaults"
+            app:elevation="4dp"
+            app:itemIconSize="25dp"
+            app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Caption"
+            app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.Caption"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="@+id/homeBottomBar"
+            app:layout_constraintEnd_toEndOf="@+id/homeBottomBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/primary" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/cocktail"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/homeBottomBar"
+        app:maxImageSize="40dp"
+        app:tint="?colorSurface"
+        app:useCompatPadding="false"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

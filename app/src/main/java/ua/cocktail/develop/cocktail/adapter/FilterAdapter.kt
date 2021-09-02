@@ -41,9 +41,7 @@ class FilterAdapter(private var callback: CheckboxFilterCallback) :
     override fun getItemCount(): Int {
         return listItems.size
     }
-
 }
-
 interface CheckboxFilterCallback {
     fun onCheckboxFilterClicked(filter: String, isChecked: Boolean)
 }

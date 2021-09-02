@@ -33,9 +33,9 @@ class DrinksAdapter :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (getItemViewType(position) == TYPE_DRINK) {
             val itemList = listItems[position] as DrinksModel
+
             holder.itemView.drinkTitleTV.text = itemList.strDrink
-            Glide
-                .with(holder.itemView.context)
+            Glide.with(holder.itemView.context)
                 .load(itemList.strDrinkThumb)
                 .centerCrop()
                 .into(holder.itemView.drinkPhotoIV)

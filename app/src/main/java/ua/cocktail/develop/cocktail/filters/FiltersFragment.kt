@@ -78,7 +78,6 @@ class FiltersFragment : Fragment(), FiltersFragmentView, CheckboxFilterCallback 
         toolBarFilter.setNavigationOnClickListener { requireActivity().onBackPressed() }
         return view
     }
-
 }
 
 interface FilterMapCallback {
